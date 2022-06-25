@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Fira+Code:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    box-sizing: border-box;
+}
+
+header {
+    background: url('./header-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.49);
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+
+
+}
+
+nav div ul {
+    display: flex;
+    list-style: none;
+}
+
+nav div ul li {
+    padding: 5%;
+}
+
+nav div ul li a {
+    text-decoration: none;
+}
+
+/*  switch  start */
+.switch {
+    width: 50px;
+    height: 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    background: #C9C9C9;
+    display: flex;
+    position: relative;
+    align-items: center;
+
+}
+
+.switch::before {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 22px;
+    height: 20px;
+    border-radius: 50px;
+    position: absolute;
+
+    left: 3px;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-input:checked+.switch {
+    background: rgb(92, 92, 92);
+}
+
+.switch-input:checked+.switch::before {
+    background: #333;
+    left: calc((50px - 22px) - 3px);
+}
+
+/* End */
+
+nav div:nth-child(3) {
+    display: flex;
+    align-items: center;
+}
+
+header>div {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+main {
+    height: 100%;
+}
+
+main div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.iconf {
+    font-size: 40px;
+}
+
+footer div li {
+    list-style: none;
+}
+
+footer div li a {
+    text-decoration: none;
+}
